@@ -22,8 +22,9 @@ class EulerInc(action_name : String){
    * @param action_values
    */
   def handle(action_values : String) = {
-    if(action_name == "inc_batch") {
-        
-    }
+    val parseVals = SparkUtils.parseActionValue(action_name,action_values)
+    
   }
+  
+  
 }

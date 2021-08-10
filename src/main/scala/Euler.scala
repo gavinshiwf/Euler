@@ -16,7 +16,7 @@ object Euler extends App {
   val parser = new OptionParser()
   val helpInfo = parser.acceptsAll(java.util.Arrays.asList("help","h"),"帮助信息. 注意(系统级别说明): 自定义变量不能使用euler或EULER开头").forHelp()
   parser.accepts(EulerOptions.OPTION_PARAM_INC_TABLE,"按表进行增量同步 eg: inc-table table1,table2...").withRequiredArg()
-  parser.accepts(EulerOptions.OPTION_PARAM_INC_BATCH,"按批次进行增量同步 eg: inc-batch batch:1").withRequiredArg()
+  parser.accepts(EulerOptions.OPTION_PARAM_INC_BATCH,"按批次进行增量同步 eg: inc-batch 1").withRequiredArg()
   parser.accepts(EulerOptions.OPTION_PARAM_MERGE_TABLE,"按表进行MERGE操作 eg: merge-table table1,table2...").withRequiredArg()
   parser.accepts(EulerOptions.OPTION_PARAM_MERGE_BATCH,"按批次进行MERGE操作 eg: merge-batch 1").withRequiredArg()
   //parser.accepts(EulerOptions.OPTION_PARAM_INIT_JOB,"初始化任务").withRequiredArg()
